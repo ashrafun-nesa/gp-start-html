@@ -112,29 +112,11 @@ body {
 .input-field.active ~ .down-arrow-icon img {
   transform: rotate(180deg);
 }
-
-.dropdown {
-  width: 100%;
+.input-field option {
   background-color: #17415CF2;
-  position: absolute;
-  top: calc(100% + 6px);
-  left: 0;
-  list-style: none;
-  z-index: 10;
   text-align: left;
-  padding: 8px 0;
-}
-
-.dropdown li {
-    padding: 10px 16px;
-    font-size: 16px;
-    max-width: 310px;
-    overflow: hidden;
-    white-space: nowrap;
-    color: #ffffff;
-    text-overflow: ellipsis;
-    width: 100%;
-    z-index: 100;
+  padding: 0 !important;
+  color: #ffffff;
 }
 
 .input-field::placeholder {
