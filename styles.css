@@ -1,0 +1,193 @@
+@font-face {
+    font-family: 'Telenor Evolution';
+    src: local('Telenor Evolution'),
+         url('./fonts/TelenorEvolution-Bold.otf') format('otf'),
+         url('./fonts/TelenorEvolution-ExtraBoldSlanted.otf') format('otf'),
+         url('./fonts/TelenorEvolution-Medium.otf') format('otf'),
+         url('./fonts/TelenorEvolution-Normal.otf') format('otf');
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Telenor Evolution' , sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gp-app {
+  text-align: center;
+}
+
+.main_container {
+  max-width: 576px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #1c2a3c, #395675);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-border {
+  background: linear-gradient(to right, #2989d8, #7db9e8);
+  padding: 3px;
+  border-radius: 53px;
+}
+
+.login-form {
+  background: linear-gradient(to bottom, #1e5799, #2989d8);
+  border-radius: 50px;
+  padding: 27px 20px 34px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.login-form h1 {
+    /* text-2xl font-medium text-[#FFFEF6] max-w-[300px] w-full mt-6 mb-8*/
+
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: #FFFEF6;
+    max-width: 300px;
+    width: 100%;
+    margin: 24px 0 30px;
+
+}
+
+.input-wrapper {
+    width: 100%;
+    margin-bottom: 12px;
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+}
+
+.input-wrapper.number-input {
+    margin-bottom: 36px;
+}
+
+.login-wrapper .icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-field {
+  background: linear-gradient(to right, #174F72, #135f8d); 
+  width: 100%;
+  padding: 15px 20px 15px 45px;
+  outline: none;
+  border: none;
+  color: #6EE0FB;
+  font-size: 15px;
+  text-align: left;
+}
+
+.down-arrow-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.down-arrow-icon img {
+  transition: all .03s ease;
+}
+
+.input-field.active ~ .down-arrow-icon img {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  width: 100%;
+  background-color: #17415CF2;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  list-style: none;
+  z-index: 10;
+  text-align: left;
+  padding: 8px 0;
+}
+
+.dropdown li {
+    padding: 10px 16px;
+    font-size: 16px;
+    max-width: 310px;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #ffffff;
+    text-overflow: ellipsis;
+    width: 100%;
+    z-index: 100;
+}
+
+.input-field::placeholder {
+  color: #6EE0FB;
+  opacity: .7; 
+}
+
+.input-field::-ms-input-placeholder { /* Edge 12 -18 */
+  color: #6EE0FB;
+  opacity: .7; 
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.share-button {
+  background: linear-gradient(to right, #174F72, #135f8d);
+  padding: 12px 15px;
+  color: #FFFEF6;
+  font-size: 18px;
+  border-radius: 10px;
+  margin-bottom: 47px;
+  border: none;
+}
+
+.term-condition {
+    font-size: 7px;
+    font-weight: 500;
+    color: #FFFEF6;
+}
+.relative {
+  position: relative;
+}
+
+.validation-msg {
+  text-align: left;
+  color: #FFFEF6;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+@media only screen and (max-width : 356px) {
+  .login-form {
+    padding: 27px 10px 34px;
+  }
+}
+
+
