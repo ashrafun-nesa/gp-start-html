@@ -99,24 +99,96 @@ body {
   text-align: left;
 }
 
-.down-arrow-icon {
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.down-arrow-icon img {
-  transition: all .03s ease;
+.loaction-wrapper {
+  border-top:  1px solid #56DCF9;
+  border-bottom:  1px solid #56DCF9;
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  margin-bottom: 24px;
 }
 
-.input-field.active ~ .down-arrow-icon img {
-  transform: rotate(180deg);
-}
-.input-field option {
-  background-color: #17415CF2;
-  text-align: left;
-  padding: 0 !important;
+.loaction-wrapper h2{
+  font-size: 18px;
+  font-weight: 500;
   color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.loaction-wrapper .radio-btn {
+  margin-bottom: 14px;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.loaction-wrapper .radio-btn:last-child {
+  margin-bottom: 0;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    display: none;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 1.12;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 400;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ffffff;
+    border-radius: 100%;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+[type="radio"]:not(:checked) + label {
+  color: #fffff6;
+}
+
+[type="radio"]:checked + label {
+  color: #ffffff;
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
 
 .input-field::placeholder {
